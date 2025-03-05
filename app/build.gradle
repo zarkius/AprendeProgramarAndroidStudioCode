@@ -18,6 +18,8 @@ import groovy.xml.MarkupBuilder
 
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 def twaManifest = [
@@ -209,7 +211,8 @@ dependencies {
         implementation 'com.google.androidbrowserhelper:billing:1.0.0-alpha11'
     
         implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
-    
+    implementation 'com.google.firebase:firebase-crashlytics:19.4.1'
+
 }
 java {
     toolchain {

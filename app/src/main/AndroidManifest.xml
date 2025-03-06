@@ -20,6 +20,7 @@
      application, the package attribute will need to reflect the correct path in order to use
      the abbreviated format. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.playconsole.aprendeprogramar2">
 
     
@@ -38,7 +39,7 @@
     <uses-feature
         android:name="android.hardware.vr.headtracking"
         android:required="false"
-        android:version="1" />
+        tools:targetApi="24" />
 
     <uses-feature
         android:name="oculus.software.handtracking"
@@ -231,7 +232,8 @@
         <!-- This service checks who calls it at runtime. -->
         <service
             android:name="com.google.androidbrowserhelper.playbilling.provider.PaymentService"
-            android:exported="true" >
+            android:exported="false"
+            android:permission="TODO">
             <intent-filter>
                 <action android:name="org.chromium.intent.action.IS_READY_TO_PAY" />
             </intent-filter>

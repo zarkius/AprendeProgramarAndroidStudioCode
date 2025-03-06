@@ -9,8 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```">
-      <changelist_data name="diego" email="63115070+zarkius@users.noreply.github.com" automatic="false" />
+    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```">
+      <change beforePath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,23 +77,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Android Profiler Group#1&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/diego/StudioProjects/AprendeProgramarAndroidStudioCode&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.google.urlassistant.datalayer.db.AppLinksAssistantSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/diego/StudioProjects/AprendeProgramarAndroidStudioCode",
+    "settings.editor.selected.configurable": "com.google.urlassistant.datalayer.db.AppLinksAssistantSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="AprendeProgramarAndroidStudioCode.app" />
@@ -223,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741191346741</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```">
+      <option name="closed" value="true" />
+      <created>1741283354376</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1741283354376</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -236,7 +246,8 @@
     <MESSAGE value="```&#10;feat: Add Firebase Crashlytics settings to App Insights&#10;&#10;This commit adds Firebase Crashlytics settings to the App Insights configuration in `.idea/appInsightsSettings.xml`. The new settings include placeholder values for `appId`, `mobileSdkAppId`, `projectId`, and `projectNumber`. It also sets the signal to `SIGNAL_UNSPECIFIED`, the time interval to `THIRTY_DAYS`, and the visibility type to `ALL`.&#10;```" />
     <MESSAGE value="```&#10;feat: Integrate Firebase services and update project configurations&#10;&#10;This commit introduces the following changes:&#10;&#10;-   Adds `google-services.json` to the `app` directory, configuring Firebase services with project-specific details such as project ID, storage bucket, and API keys.&#10;-   Updates the root `build.gradle` to include the `google-services` and `firebase-crashlytics-gradle` plugins.&#10;-   Modifies `.idea/appInsightsSettings.xml` to include project connection details, setting the app ID, mobile SDK app ID, project ID, and project number.&#10;-   Updates `app/build.gradle` to apply the `google-services` and `firebase-crashlytics` plugins and adds the `firebase-crashlytics` implementation.&#10;```" />
     <MESSAGE value="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```" />
-    <option name="LAST_COMMIT_MESSAGE" value="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```" />
+    <MESSAGE value="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```" />
+    <option name="LAST_COMMIT_MESSAGE" value="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -249,12 +260,12 @@
       <map>
         <entry key="com.playconsole.aprendeprogramar2">
           <value>
-            <CheckInfo lastCheckTimestamp="1741189936461" />
+            <CheckInfo lastCheckTimestamp="1741283390549" />
           </value>
         </entry>
         <entry key="com.playconsole.aprendeprogramar2.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1741189936454" />
+            <CheckInfo lastCheckTimestamp="1741283390541" />
           </value>
         </entry>
       </map>

@@ -9,13 +9,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```" />
+    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```">
+      <changelist_data name="diego" email="63115070+zarkius@users.noreply.github.com" automatic="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
@@ -43,8 +44,14 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="diego &lt;63115070+zarkius@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -208,16 +215,31 @@
       <option name="project" value="LOCAL" />
       <updated>1741191132380</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```">
+      <option name="closed" value="true" />
+      <created>1741191346741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741191346741</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="```&#10;feat: Configure project for Git and enable Gradle configuration cache&#10;&#10;This commit introduces the following changes:&#10;&#10;-   Adds `.idea/vcs.xml` to configure the project's root directory to use Git for version control.&#10;-   Enables the Gradle configuration cache by setting `org.gradle.configuration-cache=true` in `gradle.properties`.&#10;```" />
     <MESSAGE value="```&#10;refactor: Update Gradle settings with migration version&#10;&#10;This commit updates the Gradle settings in `.idea/gradle.xml` to include the migration version, setting `migrationVersion` to &quot;1&quot;.&#10;```" />
     <MESSAGE value="```&#10;feat: Add Firebase Crashlytics settings to App Insights&#10;&#10;This commit adds Firebase Crashlytics settings to the App Insights configuration in `.idea/appInsightsSettings.xml`. The new settings include placeholder values for `appId`, `mobileSdkAppId`, `projectId`, and `projectNumber`. It also sets the signal to `SIGNAL_UNSPECIFIED`, the time interval to `THIRTY_DAYS`, and the visibility type to `ALL`.&#10;```" />
     <MESSAGE value="```&#10;feat: Integrate Firebase services and update project configurations&#10;&#10;This commit introduces the following changes:&#10;&#10;-   Adds `google-services.json` to the `app` directory, configuring Firebase services with project-specific details such as project ID, storage bucket, and API keys.&#10;-   Updates the root `build.gradle` to include the `google-services` and `firebase-crashlytics-gradle` plugins.&#10;-   Modifies `.idea/appInsightsSettings.xml` to include project connection details, setting the app ID, mobile SDK app ID, project ID, and project number.&#10;-   Updates `app/build.gradle` to apply the `google-services` and `firebase-crashlytics` plugins and adds the `firebase-crashlytics` implementation.&#10;```" />
     <MESSAGE value="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```" />
     <option name="LAST_COMMIT_MESSAGE" value="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="dal_apis">
     <option name="consented" value="true" />

@@ -16,7 +16,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```" />
+    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/shortcuts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/shortcuts.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +84,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -275,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741286396319</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```">
+      <option name="closed" value="true" />
+      <created>1741286434383</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741286434383</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">

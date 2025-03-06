@@ -17,20 +17,45 @@ package com.playconsole.aprendeprogramar2;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.integrity.IntegrityManager;
 import com.google.android.play.core.integrity.IntegrityManagerFactory;
+import com.google.android.play.core.integrity.IntegrityServiceException;
 import com.google.android.play.core.integrity.IntegrityTokenRequest;
 import com.google.android.play.core.integrity.IntegrityTokenResponse;
+import com.google.android.play.core.integrity.model.IntegrityErrorCode;
 
 import java.util.Objects;
 
+
 public class LauncherActivity extends AppCompatActivity {
-    private static final String TAG = "LauncherActivity";
+
+    private static void onComplete(Task<IntegrityTokenResponse> task) {
+        if (task.isSuccessful()) {
+            IntegrityTokenResponse response = task.getResult();
+            PlayIntegrityIntegrityCheck integrityCheck = PlayIntegrityIntegrityCheck.create();
+            int resultCode = Integer.parseInt(integrityCheck.check(response.token()));
+
+            if (resultCode == IntegrityErrorCode.PLAY_STORE_NOT_FOUND)
+                Log.e("PlayIntegrity", "Integrity check failed: Play Store not found");
+            else if (resultCode == IntegrityErrorCode.NO_ERROR) {
+                Log.d("PlayIntegrity", "Integrity check passed");
+            } else {
+                Log.e("PlayIntegrity", "Integrity check failed: " + resultCode);
+            }
+        } else {
+            int errorCode = ((IntegrityServiceException) Objects.requireNonNull(task.getException())).getErrorCode();
+
+            if (errorCode == IntegrityErrorCode.PLAY_STORE_NOT_FOUND) {
+                Log.e("PlayIntegrity", "Integrity check failed: Play Store not found");
+            } else {
+                Log.e("PlayIntegrity", "Integrity check failed: " + errorCode);
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,20 +66,11 @@ public class LauncherActivity extends AppCompatActivity {
 
     private void checkPlayIntegrity() {
         IntegrityManager integrityManager = IntegrityManagerFactory.create(this);
-        Task<IntegrityTokenResponse> integrityTokenResponse = integrityManager.requestIntegrityToken(
-                IntegrityTokenRequest.builder()
-                        .setCloudProjectNumber(123456789012L)
-                        .build());
-        integrityTokenResponse.addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                String integrityToken = task.getResult().token();
-                Log.d(TAG, "Integrity token: " + integrityToken);
-
-            } else {
-                int errorCode = ((com.google.android.play.core.integrity.IntegrityServiceException) Objects.requireNonNull(task.getException())).getErrorCode();
-                Log.e(TAG, "Error requesting integrity token: " + errorCode);
-                Toast.makeText(LauncherActivity.this, "Error: " + errorCode, Toast.LENGTH_SHORT).show();
-            }
-        });
+        IntegrityTokenRequest integrityTokenRequest = IntegrityTokenRequest.builder()
+                .setCloudProjectNumber(1234567890)
+                .setNonce("example_nonce")
+                .build();
+        Task<IntegrityTokenResponse> integrityTokenResponse = integrityManager.requestIntegrityToken(integrityTokenRequest);
+        integrityTokenResponse.addOnCompleteListener(LauncherActivity::onComplete);
     }
 }

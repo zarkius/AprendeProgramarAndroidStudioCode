@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "483619470669",
+    "project_id": "yposteriormente",
+    "storage_bucket": "yposteriormente.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483619470669:android:b2d95906455c4ecda6cb04",
+        "android_client_info": {
+          "package_name": "com.playconsole.aprendeprogramar2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483619470669-mj5uaa1j7mh0url8molc7nnv846cli2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwRCj-dc8IyAZ62gGLMoOsjnsk0mTYbgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483619470669-mj5uaa1j7mh0url8molc7nnv846cli2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1801340051704618~6961039959"
+    }
+  ],
+  "configuration_version": "1"
+}

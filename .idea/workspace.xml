@@ -16,10 +16,38 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```">
+    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;refactor: Update project settings and remove unused resources&#10;&#10;This commit includes the following changes:&#10;&#10;- Updates `.idea/workspace.xml` to change the `selectedTabId` in the `ProblemsViewState` to `CurrentFile`.&#10;- Removes content from `app/src/main/res/values/styles.xml`, `app/src/main/res/values/colors.xml` effectively removing custom theme definitions.&#10;- Clears all shortcut definitions by deleting `app/src/main/res/xml/shortcuts.xml`.&#10;- Clears all file paths definitions by deleting `app/src/main/res/xml/filepaths.xml`.&#10;- Remove all icons and images from mipmaps and drawables folder.&#10;- Added new `MainActivity.java`.&#10;- Added new layout `activity_main.xml`.&#10;- Add integrity check on `LauncherActivity.java`.&#10;- Added new files for the integrity check logic.&#10;- Added new values files `values.xml`,`values2.xml`,`values3.xml`,`refs.xml`,`colors2.xml`,`styles2.xml`.&#10;- Modified the `AndroidManifest.xml` to add `MainActivity.java`.&#10;- Added new `app.xml` configuration file.&#10;- Remove all TWA setting from `build.gradle`.&#10;- Modified the `strings.xml` file.&#10;```">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/app.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/PlayIntegrityIntegrityCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/shortcuts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/shortcuts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_notification_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_notification_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_notification_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_notification_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_notification_icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/splash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/filepaths.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/shortcuts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +84,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="valueResourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -83,6 +114,9 @@
     &quot;accountId&quot;: &quot;57e0ce37-ff97-4543-9df7-2a64eb05896a&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-35/java/util/Optional.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -99,104 +133,41 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Android App.LauncherActivity.executor": "Run",
+    "Android App.MainActivity.executor": "Run",
+    "Android App.Sin nombre.executor": "Debug",
     "Android App.app.executor": "Run",
-    "ResourceManagerPrefKey.ResourceType": "ANIMATOR",
+    "ResourceManagerPrefKey.ResourceType": "LAYOUT",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/diego/StudioProjects/AprendeProgramarAndroidStudioCode",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "com.google.urlassistant.datalayer.db.AppLinksAssistantSettingsConfigurable"
+    "settings.editor.selected.configurable": "memory.settings"
   }
 }]]></component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.playconsole.aprendeprogramar2" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.playconsole.aprendeprogramar2" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="AprendeProgramarAndroidStudioCode.app" />
-      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
-      <option name="DEPLOY" value="true" />
-      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
-      <option name="DEPLOY_AS_INSTANT" value="false" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="true" />
-      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
-      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
-      <option name="CLEAR_APP_STORAGE" value="false" />
-      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="RESTORE_ENABLED" value="false" />
-      <option name="RESTORE_FILE" value="" />
-      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Hybrid>
-      <Java>
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Java>
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
-        <option name="DEBUG_SANDBOX_SDK" value="false" />
-      </Native>
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-        <option name="STARTUP_PROFILING_ENABLED" value="true" />
-        <option name="STARTUP_CPU_PROFILING_ENABLED" value="true" />
-        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="System Trace" />
-        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
-        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-      </Profilers>
-      <option name="DEEP_LINK" value="https://yposteriormente.com" />
-      <option name="ACTIVITY" value="/index.html" />
-      <option name="ACTIVITY_CLASS" value="com.playconsole.aprendeprogramar2.LauncherActivity1" />
-      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
-      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -287,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741286434383</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="```&#10;refactor: Update project settings and shortcut configuration&#10;&#10;This commit includes the following changes:&#10;&#10;-   Updates `.idea/workspace.xml` to change the `selectedTabId` in the `ProblemsViewState` to `ProjectErrors`.&#10;-   Removes content from `app/src/main/res/values/styles.xml`, effectively removing custom theme definitions.&#10;-   Clears all shortcut definitions by setting an empty definition in `app/src/main/res/xml/shortcuts.xml`.&#10;```">
+      <option name="closed" value="true" />
+      <created>1741286599905</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741286599905</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -304,7 +283,9 @@
     <MESSAGE value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService` .&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;```" />
     <MESSAGE value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes  `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecesary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;```" />
     <MESSAGE value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```" />
-    <option name="LAST_COMMIT_MESSAGE" value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```" />
+    <MESSAGE value="```&#10;refactor: Update project settings and shortcut configuration&#10;&#10;This commit includes the following changes:&#10;&#10;-   Updates `.idea/workspace.xml` to change the `selectedTabId` in the `ProblemsViewState` to `ProjectErrors`.&#10;-   Removes content from `app/src/main/res/values/styles.xml`, effectively removing custom theme definitions.&#10;-   Clears all shortcut definitions by setting an empty definition in `app/src/main/res/xml/shortcuts.xml`.&#10;```" />
+    <MESSAGE value="```&#10;refactor: Update project settings and remove unused resources&#10;&#10;This commit includes the following changes:&#10;&#10;- Updates `.idea/workspace.xml` to change the `selectedTabId` in the `ProblemsViewState` to `CurrentFile`.&#10;- Removes content from `app/src/main/res/values/styles.xml`, `app/src/main/res/values/colors.xml` effectively removing custom theme definitions.&#10;- Clears all shortcut definitions by deleting `app/src/main/res/xml/shortcuts.xml`.&#10;- Clears all file paths definitions by deleting `app/src/main/res/xml/filepaths.xml`.&#10;- Remove all icons and images from mipmaps and drawables folder.&#10;- Added new `MainActivity.java`.&#10;- Added new layout `activity_main.xml`.&#10;- Add integrity check on `LauncherActivity.java`.&#10;- Added new files for the integrity check logic.&#10;- Added new values files `values.xml`,`values2.xml`,`values3.xml`,`refs.xml`,`colors2.xml`,`styles2.xml`.&#10;- Modified the `AndroidManifest.xml` to add `MainActivity.java`.&#10;- Added new `app.xml` configuration file.&#10;- Remove all TWA setting from `build.gradle`.&#10;- Modified the `strings.xml` file.&#10;```" />
+    <option name="LAST_COMMIT_MESSAGE" value="```&#10;refactor: Update project settings and remove unused resources&#10;&#10;This commit includes the following changes:&#10;&#10;- Updates `.idea/workspace.xml` to change the `selectedTabId` in the `ProblemsViewState` to `CurrentFile`.&#10;- Removes content from `app/src/main/res/values/styles.xml`, `app/src/main/res/values/colors.xml` effectively removing custom theme definitions.&#10;- Clears all shortcut definitions by deleting `app/src/main/res/xml/shortcuts.xml`.&#10;- Clears all file paths definitions by deleting `app/src/main/res/xml/filepaths.xml`.&#10;- Remove all icons and images from mipmaps and drawables folder.&#10;- Added new `MainActivity.java`.&#10;- Added new layout `activity_main.xml`.&#10;- Add integrity check on `LauncherActivity.java`.&#10;- Added new files for the integrity check logic.&#10;- Added new values files `values.xml`,`values2.xml`,`values3.xml`,`refs.xml`,`colors2.xml`,`styles2.xml`.&#10;- Modified the `AndroidManifest.xml` to add `MainActivity.java`.&#10;- Added new `app.xml` configuration file.&#10;- Remove all TWA setting from `build.gradle`.&#10;- Modified the `strings.xml` file.&#10;```" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

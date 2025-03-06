@@ -57,10 +57,10 @@ android {
     namespace "com.playconsole.aprendeprogramar2"
     defaultConfig {
         applicationId "com.playconsole.aprendeprogramar2"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 35
         versionCode 1
-        versionName "1.0.0.0"
+        versionName "4.0.0.0"
 
         // The name for the application
         resValue "string", "appName", twaManifest.name
@@ -88,7 +88,6 @@ android {
 
         // The hostname is used when building the intent-filter, so the TWA is able to
         // handle Intents to open host url of the application.
-        resValue "string", "hostName", twaManifest.hostName
 
         // This attribute sets the status bar color for the TWA. It can be either set here or in
         // `res/values/colors.xml`. Setting in both places is an error and the app will not
@@ -145,7 +144,6 @@ android {
 
         resValue "string", "fallbackType", twaManifest.fallbackType
 
-        resValue "bool", "enableSiteSettingsShortcut", twaManifest.enableSiteSettingsShortcut
         resValue "string", "orientation", twaManifest.orientation
     }
     buildTypes {
@@ -162,7 +160,7 @@ android {
     }
 }
 
-task generateShorcutsFile {
+tasks.register('generateShorcutsFile') {
     assert twaManifest.shortcuts.size() < 5, "You can have at most 4 shortcuts."
     twaManifest.shortcuts.eachWithIndex { s, i ->
         assert s.name != null, 'Missing `name` in shortcut #' + i
@@ -177,23 +175,23 @@ task generateShorcutsFile {
     def xmlMarkup = new MarkupBuilder(new IndentPrinter(xmlWriter, "    ", true))
 
     xmlMarkup
-        .'shortcuts'('xmlns:android': 'http://schemas.android.com/apk/res/android') {
-            twaManifest.shortcuts.eachWithIndex { s, i ->
-                'shortcut'(
-                        'android:shortcutId': 'shortcut' + i,
-                        'android:enabled': 'true',
-                        'android:icon': '@drawable/' + s.icon,
-                        'android:shortcutShortLabel': '@string/shortcut_short_name_' + i,
-                        'android:shortcutLongLabel': '@string/shortcut_name_' + i) {
-                    'intent'(
-                            'android:action': 'android.intent.action.MAIN',
-                            'android:targetPackage': twaManifest.applicationId,
-                            'android:targetClass': twaManifest.applicationId + '.LauncherActivity',
-                            'android:data': s.url)
-                    'categories'('android:name': 'android.intent.category.LAUNCHER')
+            .'shortcuts'('xmlns:android': 'http://schemas.android.com/apk/res/android') {
+                twaManifest.shortcuts.eachWithIndex { s, i ->
+                    'shortcut'(
+                            'android:shortcutId': 'shortcut' + i,
+                            'android:enabled': 'true',
+                            'android:icon': '@drawable/' + s.icon,
+                            'android:shortcutShortLabel': '@string/shortcut_short_name_' + i,
+                            'android:shortcutLongLabel': '@string/shortcut_name_' + i) {
+                        'intent'(
+                                'android:action': 'android.intent.action.MAIN',
+                                'android:targetPackage': twaManifest.applicationId,
+                                'android:targetClass': twaManifest.applicationId + '.LauncherActivity',
+                                'android:data': s.url)
+                        'categories'('android:name': 'android.intent.category.LAUNCHER')
+                    }
                 }
             }
-        }
     shortcutsFile.text = xmlWriter.toString() + '\n'
 }
 
@@ -212,6 +210,8 @@ dependencies {
     
         implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
     implementation 'com.google.firebase:firebase-crashlytics:19.4.1'
+    implementation 'com.google.android.play:integrity:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 
 }
 java {

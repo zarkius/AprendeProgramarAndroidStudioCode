@@ -4,15 +4,30 @@
     <shared>
       <config />
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_launcher.xml">
+        <config>
+          <theme>@android:style/Theme.Translucent.NoTitleBar</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```">
-      <change beforePath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appInsightsSettings.xml" afterDir="false" />
+    <list default="true" id="a5dfd367-db92-4165-b209-4f7ed6a36f54" name="Changes" comment="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/web_app_manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +60,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="layoutResourceFile_vertical" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -68,11 +91,16 @@
     &quot;accountId&quot;: &quot;57e0ce37-ff97-4543-9df7-2a64eb05896a&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2ttxTveet7YLMEBLhiyTMjoX7JI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -80,6 +108,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Android App.app.executor": "Run",
+    "ResourceManagerPrefKey.ResourceType": "ANIMATOR",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -91,9 +120,18 @@
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/diego/StudioProjects/AprendeProgramarAndroidStudioCode",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "com.google.urlassistant.datalayer.db.AppLinksAssistantSettingsConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.playconsole.aprendeprogramar2" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="AprendeProgramarAndroidStudioCode.app" />
@@ -103,7 +141,7 @@
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ALL_USERS" value="false" />
+      <option name="ALL_USERS" value="true" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="ALLOW_ASSUME_VERIFIED" value="false" />
       <option name="CLEAR_APP_STORAGE" value="false" />
@@ -158,9 +196,9 @@
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="DEEP_LINK" value="https://yposteriormente.com" />
+      <option name="ACTIVITY" value="/index.html" />
+      <option name="ACTIVITY_CLASS" value="com.playconsole.aprendeprogramar2.LauncherActivity1" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
@@ -233,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741283354376</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService` .&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;```">
+      <option name="closed" value="true" />
+      <created>1741283674896</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741283674896</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -247,7 +293,10 @@
     <MESSAGE value="```&#10;feat: Integrate Firebase services and update project configurations&#10;&#10;This commit introduces the following changes:&#10;&#10;-   Adds `google-services.json` to the `app` directory, configuring Firebase services with project-specific details such as project ID, storage bucket, and API keys.&#10;-   Updates the root `build.gradle` to include the `google-services` and `firebase-crashlytics-gradle` plugins.&#10;-   Modifies `.idea/appInsightsSettings.xml` to include project connection details, setting the app ID, mobile SDK app ID, project ID, and project number.&#10;-   Updates `app/build.gradle` to apply the `google-services` and `firebase-crashlytics` plugins and adds the `firebase-crashlytics` implementation.&#10;```" />
     <MESSAGE value="```&#10;feat: Add project configuration to workspace&#10;&#10;This commit adds `.idea/workspace.xml`, which includes various configurations for the project, such as:&#10;&#10;- Git settings for pushing and updating.&#10;- Gradle project states and management.&#10;- Execution target settings for Android app runs.&#10;- Settings for Firebase Crashlytics, including connection details and debugging configurations.&#10;- Task management configurations for project build.&#10;```" />
     <MESSAGE value="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```" />
-    <option name="LAST_COMMIT_MESSAGE" value="```&#10;feat: Update project workspace configuration&#10;&#10;This commit updates `.idea/workspace.xml` to include changes list metadata and Git settings:&#10;&#10;- Adds changelist metadata.&#10;- Adds previous commit authors.&#10;- Enables signing off commits.&#10;```" />
+    <MESSAGE value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService` .&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;```" />
+    <MESSAGE value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes  `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecesary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;```" />
+    <MESSAGE value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```" />
+    <option name="LAST_COMMIT_MESSAGE" value="```&#10;refactor: Update project configurations and settings&#10;&#10;This commit includes several updates to project settings and configurations:&#10;&#10;-   Updates `.idea/appInsightsSettings.xml` to switch the selected tab to &quot;Firebase Crashlytics&quot;.&#10;-   Updates `.idea/workspace.xml` to include changes list metadata and Git settings, including previous commit authors and enabling sign-off commits.&#10;-   Modifies `app/src/main/java/com/playconsole/aprendeprogramar2/LauncherActivity.java` to simplify the orientation setting logic, no longer limiting it by the Android version.&#10;-   Updates `app/src/main/AndroidManifest.xml` to add the `tools` namespace, `targetApi` attribute, and changes the `exported` and `permission` attribute of `PaymentService`.&#10;-   Updates `.idea/caches/deviceStreaming.xml` to include new device configurations.&#10;- Removes `app/src/main/res/drawable-anydpi/shortcut_legacy_background.xml` and `app/src/main/res/raw/web_app_manifest.json`&#10;- Removes `shortcut_background` color in `app/src/main/res/values/colors.xml`.&#10;- Replace jcenter with mavenCentral in `build.gradle`.&#10;- Removes unnecessary code from `app/src/main/java/com/playconsole/aprendeprogramar2/Application.java`.&#10;- Change minsdk to 26 and version Name to 4.0.0.0 in `app/build.gradle`.&#10;- Add activity_launcher.xml and styles.xml.&#10;```" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

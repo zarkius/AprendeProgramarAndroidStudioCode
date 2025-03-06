@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- ... your styles -->
+    </style>
+
+    <style name="MyCustomTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Your custom theme attributes -->
+    </style>
+</resources>

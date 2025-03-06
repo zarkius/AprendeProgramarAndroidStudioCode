@@ -15,33 +15,46 @@
  */
 package com.playconsole.aprendeprogramar2;
 
-import android.content.pm.ActivityInfo;
-import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.Task;
+import com.google.android.play.core.integrity.IntegrityManager;
+import com.google.android.play.core.integrity.IntegrityManagerFactory;
+import com.google.android.play.core.integrity.IntegrityTokenRequest;
+import com.google.android.play.core.integrity.IntegrityTokenResponse;
 
-public class LauncherActivity
-        extends com.google.androidbrowserhelper.trusted.LauncherActivity {
-    
+import java.util.Objects;
 
-    
+public class LauncherActivity extends AppCompatActivity {
+    private static final String TAG = "LauncherActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Setting an orientation crashes the app due to the transparent background on Android 8.0
-        // Oreo and below. We only set the orientation on Oreo and above. This only affects the
-        // splash screen and Chrome will still respect the orientation.
-        // See https://github.com/GoogleChromeLabs/bubblewrap/issues/496 for details.
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setContentView(R.layout.activity_launcher);
+        checkPlayIntegrity();
     }
 
-    @Override
-    protected Uri getLaunchingUrl() {
-        // Get the original launch Url.
+    private void checkPlayIntegrity() {
+        IntegrityManager integrityManager = IntegrityManagerFactory.create(this);
+        Task<IntegrityTokenResponse> integrityTokenResponse = integrityManager.requestIntegrityToken(
+                IntegrityTokenRequest.builder()
+                        .setCloudProjectNumber(123456789012L)
+                        .build());
+        integrityTokenResponse.addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                String integrityToken = task.getResult().token();
+                Log.d(TAG, "Integrity token: " + integrityToken);
 
-
-        return super.getLaunchingUrl();
+            } else {
+                int errorCode = ((com.google.android.play.core.integrity.IntegrityServiceException) Objects.requireNonNull(task.getException())).getErrorCode();
+                Log.e(TAG, "Error requesting integrity token: " + errorCode);
+                Toast.makeText(LauncherActivity.this, "Error: " + errorCode, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

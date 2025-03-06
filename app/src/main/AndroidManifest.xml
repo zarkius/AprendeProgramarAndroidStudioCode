@@ -23,57 +23,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.playconsole.aprendeprogramar2">
 
-    
-        <uses-permission android:name="android.permission.INTERNET"/>
-    
-        <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    
 
-    
-    <uses-permission android:name="com.oculus.permission.HAND_TRACKING" />
-    
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+    <uses-permission
+        android:name="com.playconsole.aprendeprogramar2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        tools:node="remove" />
 
-    
+    <permission
+        android:name="com.playconsole.aprendeprogramar2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        tools:node="remove" />
+    <application
+        android:name="com.playconsole.aprendeprogramar2.Application"
+        tools:remove="android:appComponentFactory">
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                tools:node="remove" />
+        </service>
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            tools:node="remove" />
 
-    
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            tools:node="remove" />
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            tools:node="remove" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            tools:node="remove" />
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            tools:node="remove" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <uses-feature
         android:name="android.hardware.vr.headtracking"
-        android:required="false"
-        tools:targetApi="24" />
+        android:required="false" />
 
     <uses-feature
         android:name="oculus.software.handtracking"
         android:required="false" />
-    
+
 
     <application
-        android:name="Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/appName"
-        
+
         android:manageSpaceActivity="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity"
-        
+
         android:supportsRtl="true"
+        android:name=".Application"
         android:theme="@android:style/Theme.Translucent.NoTitleBar">
 
         <meta-data
             android:name="asset_statements"
             android:resource="@string/assetStatements" />
 
-        
-            <meta-data
-                android:name="web_manifest_url"
-                android:value="@string/webManifestUrl" />
-        
+
+        <meta-data
+            android:name="web_manifest_url"
+            android:value="@string/webManifestUrl" />
+
 
         <meta-data
             android:name="twa_generator"
             android:value="@string/generatorApp" />
 
-        
 
-        
         <meta-data
             android:name="com.oculus.pwa.NAME"
             android:value="@string/appName" />
@@ -85,21 +111,22 @@
         <meta-data
             android:name="com.oculus.pwa.SCOPE"
             android:value="@string/fullScopeUrl" />
-        
 
-        
-            <activity android:name="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity">
+
+        <activity android:name="com.google.androidbrowserhelper.trusted.ManageDataLauncherActivity">
             <meta-data
                 android:name="android.support.customtabs.trusted.MANAGE_SPACE_URL"
                 android:value="@string/launchUrl" />
-            </activity>
-        
+        </activity>
 
-        <activity android:name="LauncherActivity"
+
+        <activity
             android:alwaysRetainTaskState="true"
             android:label="@string/launcherName"
+            android:name=".LauncherActivity"
             android:exported="true">
-            <meta-data android:name="android.support.customtabs.trusted.DEFAULT_URL"
+            <meta-data
+                android:name="android.support.customtabs.trusted.DEFAULT_URL"
                 android:value="@string/launchUrl" />
 
             <meta-data
@@ -126,56 +153,53 @@
                 android:name="androix.browser.trusted.NAVIGATION_BAR_DIVIDER_COLOR_DARK"
                 android:resource="@color/navigationDividerColorDark" />
 
-            <meta-data android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
-                android:resource="@drawable/splash"/>
+            <meta-data
+                android:name="android.support.customtabs.trusted.SPLASH_IMAGE_DRAWABLE"
+                android:resource="@drawable/splash" />
 
-            <meta-data android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
-                android:resource="@color/backgroundColor"/>
+            <meta-data
+                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+                android:resource="@color/backgroundColor" />
 
-            <meta-data android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
-                android:value="@integer/splashScreenFadeOutDuration"/>
+            <meta-data
+                android:name="android.support.customtabs.trusted.SPLASH_SCREEN_FADE_OUT_DURATION"
+                android:value="@integer/splashScreenFadeOutDuration" />
 
-            <meta-data android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
-                android:value="@string/providerAuthority"/>
+            <meta-data
+                android:name="android.support.customtabs.trusted.FILE_PROVIDER_AUTHORITY"
+                android:value="@string/providerAuthority" />
 
-            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts" />
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
 
-            <meta-data android:name="android.support.customtabs.trusted.FALLBACK_STRATEGY"
+            <meta-data
+                android:name="android.support.customtabs.trusted.FALLBACK_STRATEGY"
                 android:value="@string/fallbackType" />
 
-            
 
-            
-            <meta-data android:name="android.support.customtabs.trusted.DISPLAY_MODE"
+            <meta-data
+                android:name="android.support.customtabs.trusted.DISPLAY_MODE"
                 android:value="immersive" />
-            
 
-            <meta-data android:name="android.support.customtabs.trusted.SCREEN_ORIENTATION"
-                android:value="@string/orientation"/>
 
-            
+            <meta-data
+                android:name="android.support.customtabs.trusted.SCREEN_ORIENTATION"
+                android:value="@string/orientation" />
 
-            
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="https"
-                    android:host="@string/hostName"/>
-            </intent-filter>
 
-            
         </activity>
 
         <activity android:name="com.google.androidbrowserhelper.trusted.FocusActivity" />
 
-        <activity android:name="com.google.androidbrowserhelper.trusted.WebViewFallbackActivity"
+        <activity
+            android:name="com.google.androidbrowserhelper.trusted.WebViewFallbackActivity"
             android:configChanges="orientation|screenSize" />
 
         <provider
@@ -193,27 +217,25 @@
             android:enabled="@bool/enableNotification"
             android:exported="@bool/enableNotification">
 
-            
-                <meta-data
-                    android:name="android.support.customtabs.trusted.SMALL_ICON"
-                    android:resource="@drawable/ic_notification_icon" />
-            
+
+            <meta-data
+                android:name="android.support.customtabs.trusted.SMALL_ICON"
+                android:resource="@drawable/ic_notification_icon" />
+
 
             <intent-filter>
-                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.support.customtabs.trusted.TRUSTED_WEB_ACTIVITY_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
 
-        
-            <activity android:name="com.google.androidbrowserhelper.trusted.NotificationPermissionRequestActivity" />
-        
 
-        
-            <activity android:name=
-        "com.google.androidbrowserhelper.locationdelegation.PermissionRequestActivity"/>
-        
-            
+        <activity android:name="com.google.androidbrowserhelper.trusted.NotificationPermissionRequestActivity" />
+
+
+        <activity android:name="com.google.androidbrowserhelper.locationdelegation.PermissionRequestActivity" />
+
+
         <activity
             android:name="com.google.androidbrowserhelper.playbilling.provider.PaymentActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
@@ -237,7 +259,7 @@
             <intent-filter>
                 <action android:name="org.chromium.intent.action.IS_READY_TO_PAY" />
             </intent-filter>
-        </service> 
-        
+        </service>
+
     </application>
 </manifest>
